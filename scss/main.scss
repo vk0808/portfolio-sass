@@ -2,6 +2,7 @@
 @import './home';
 @import './menu';
 @import './about';
+@import './projects';
 
 body {
   background-color: $primary-color;
@@ -21,7 +22,7 @@ a {
 }
 
 .text-secondary {
-  color: $secndary-color;
+  color: $secondary-color;
 }
 
 header {
@@ -45,7 +46,7 @@ main {
       @include transition-ease;
 
       &:hover {
-        color: $secndary-color;
+        color: $secondary-color;
       }
     }
   }
