@@ -4,19 +4,30 @@
     &_bio-image {
         height: 50vh;
         width: 100%;
-        background:
-            linear-gradient(
-                to right,
-                rgba($primary-color, 0.9),
-                rgba($primary-color, 0.3)
-            ),
-            url("../img/model-1.jpg") center top;
-        background-size: cover;
+        position: relative;
         display: flex;
         flex-direction: column;
         align-items: center;
         justify-content: flex-end;
-    
+        
+        &::before {
+            position: absolute;
+            top: 0px;
+            right: 0px;
+            bottom: 0px;
+            left: 0px;
+            content: '';
+            background:
+                linear-gradient(
+                    to right,
+                    rgba($primary-color, 0.9),
+                    rgba($primary-color, 0.3)
+                ),
+                url("../img/model-1.jpg") center top;
+            background-size: cover;
+            opacity: 0.3;
+        }
+
         p {
             margin-bottom: 2rem;
         }
@@ -28,6 +39,12 @@
 
         .text-secondary {
             padding-bottom: 1rem;
+            font-weight: 500;
+            font-size: 2rem;
+        }
+
+        p {
+            letter-spacing: 1px;
         }
     }
 
@@ -42,13 +59,17 @@
             background: lighten($color: $primary-color, $amount: 10%);
             padding: 0.5rem;
             border-bottom: 5px solid $secondary-color;
+            letter-spacing: 1px;
 
             h2, h3 {
-                margin: 0.5rem 0;
+                margin: 1rem 0;
             }
 
-            h6 {
-                margin: 0.3rem 0;
+            h5 {
+                margin: 0.3rem 0 0.7rem 0;
+                font-size: 1rem;
+                letter-spacing: 2px;
+                color: $accent-color;
             }
         }
     }

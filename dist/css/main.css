@@ -7,15 +7,26 @@
 
 .home {
   height: 100%;
-  padding-top: 40vh;
+  padding-top: 30vh;
   overflow: hidden;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
   text-align: center;
+  position: relative;
+}
+
+.home::before {
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
+  content: '';
   background: -webkit-gradient(linear, left top, right top, from(rgba(39, 39, 39, 0.9)), to(rgba(39, 39, 39, 0.3))), url("../img/model-1.jpg") center top;
   background: linear-gradient(to right, rgba(39, 39, 39, 0.9), rgba(39, 39, 39, 0.3)), url("../img/model-1.jpg") center top;
   background-size: cover;
+  opacity: 0.3;
 }
 
 .home_name {
@@ -28,6 +39,11 @@
 .home_name--last {
   color: #ff652f;
   font-weight: 700;
+}
+
+.home h2 {
+  padding-bottom: 0.5rem;
+  text-transform: capitalize;
 }
 
 .menu-btn {
@@ -97,7 +113,7 @@
   top: 0;
   left: 0;
   width: 100vw;
-  opacity: 0.98;
+  opacity: 1;
   visibility: hidden;
 }
 
@@ -156,7 +172,7 @@
   display: inline;
   font-size: 2rem;
   text-transform: uppercase;
-  font-weight: 300;
+  font-weight: 400;
   -webkit-transition: all 0.5s ease-in-out;
   transition: all 0.5s ease-in-out;
 }
@@ -192,9 +208,7 @@
 .about_bio-image {
   height: 50vh;
   width: 100%;
-  background: -webkit-gradient(linear, left top, right top, from(rgba(39, 39, 39, 0.9)), to(rgba(39, 39, 39, 0.3))), url("../img/model-1.jpg") center top;
-  background: linear-gradient(to right, rgba(39, 39, 39, 0.9), rgba(39, 39, 39, 0.3)), url("../img/model-1.jpg") center top;
-  background-size: cover;
+  position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -210,6 +224,19 @@
           justify-content: flex-end;
 }
 
+.about_bio-image::before {
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
+  content: '';
+  background: -webkit-gradient(linear, left top, right top, from(rgba(39, 39, 39, 0.9)), to(rgba(39, 39, 39, 0.3))), url("../img/model-1.jpg") center top;
+  background: linear-gradient(to right, rgba(39, 39, 39, 0.9), rgba(39, 39, 39, 0.3)), url("../img/model-1.jpg") center top;
+  background-size: cover;
+  opacity: 0.3;
+}
+
 .about_bio-image p {
   margin-bottom: 2rem;
 }
@@ -221,6 +248,12 @@
 
 .about_bio .text-secondary {
   padding-bottom: 1rem;
+  font-weight: 500;
+  font-size: 2rem;
+}
+
+.about_bio p {
+  letter-spacing: 1px;
 }
 
 .about .jobs {
@@ -237,14 +270,18 @@
   background: #414141;
   padding: 0.5rem;
   border-bottom: 5px solid #ff652f;
+  letter-spacing: 1px;
 }
 
 .about .jobs-job h2, .about .jobs-job h3 {
-  margin: 0.5rem 0;
+  margin: 1rem 0;
 }
 
-.about .jobs-job h6 {
-  margin: 0.3rem 0;
+.about .jobs-job h5 {
+  margin: 0.3rem 0 0.7rem 0;
+  font-size: 1rem;
+  letter-spacing: 2px;
+  color: cornflowerblue;
 }
 
 .about .social-icons {
@@ -269,9 +306,6 @@
 .projects_bio-image {
   height: 30vh;
   width: 100%;
-  background: -webkit-gradient(linear, left top, right top, from(rgba(39, 39, 39, 0.9)), to(rgba(39, 39, 39, 0.3))), url("../img/model-1.jpg") center top;
-  background: linear-gradient(to right, rgba(39, 39, 39, 0.9), rgba(39, 39, 39, 0.3)), url("../img/model-1.jpg") center top;
-  background-size: cover;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -285,11 +319,27 @@
   -webkit-box-pack: end;
       -ms-flex-pack: end;
           justify-content: flex-end;
+  position: relative;
+}
+
+.projects_bio-image::before {
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
+  content: '';
+  background: -webkit-gradient(linear, left top, right top, from(rgba(39, 39, 39, 0.9)), to(rgba(39, 39, 39, 0.3))), url("../img/model-1.jpg") center top;
+  background: linear-gradient(to right, rgba(39, 39, 39, 0.9), rgba(39, 39, 39, 0.3)), url("../img/model-1.jpg") center top;
+  background-size: cover;
+  opacity: 0.3;
 }
 
 .projects_bio-image .text-secondary {
+  font-weight: 500;
   font-size: 2rem;
   margin-bottom: 2rem;
+  text-transform: uppercase;
 }
 
 .projects_items {
@@ -380,7 +430,7 @@
 
 .contact {
   height: 100%;
-  padding-top: 30vh;
+  padding-top: 20vh;
   overflow: hidden;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -392,12 +442,24 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  position: relative;
+}
+
+.contact::before {
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
+  content: '';
   background: -webkit-gradient(linear, left top, right top, from(rgba(39, 39, 39, 0.9)), to(rgba(39, 39, 39, 0.3))), url("../img/model-1.jpg") center top;
   background: linear-gradient(to right, rgba(39, 39, 39, 0.9), rgba(39, 39, 39, 0.3)), url("../img/model-1.jpg") center top;
   background-size: cover;
+  opacity: 0.3;
 }
 
 .contact h2 {
+  text-transform: uppercase;
   font-size: 2.5rem;
   margin-bottom: 2rem;
 }
@@ -409,11 +471,92 @@
       grid-template-columns: 1fr;
   grid-gap: 2rem;
   font-size: 1.5rem;
+  padding-left: 2rem;
 }
 
 .contact .social-icons {
   position: initial;
   margin-top: 2rem;
+}
+
+@media screen and (min-width: 768px) {
+  .menu-btn {
+    visibility: hidden;
+  }
+  .nav {
+    visibility: visible;
+    padding: 1rem;
+    background-color: dimgray;
+    opacity: 0.95;
+  }
+  .nav .menu-nav {
+    display: block;
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+    height: 100%;
+    background: transparent;
+    text-align: center;
+  }
+  .nav .menu-nav_item {
+    display: inline;
+    padding-right: 1.5rem;
+  }
+  .nav .menu-nav_link {
+    font-size: 1.5rem;
+  }
+  .about_bio {
+    font-size: 1.5rem;
+  }
+  .projects_bio-image {
+    height: 40vh;
+  }
+  .projects_items {
+    width: 70vw;
+    -ms-grid-columns: (1fr)[2];
+        grid-template-columns: repeat(2, 1fr);
+  }
+  .projects .text-secondary {
+    font-size: 3rem;
+  }
+  .contact_list {
+    padding: 2rem 3rem;
+    -ms-grid-columns: (1fr)[2];
+        grid-template-columns: repeat(2, 1fr);
+  }
+  .social-icons {
+    font-size: 1.5rem;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .menu-nav_item {
+    margin: 0 1.5rem;
+  }
+  .home {
+    padding-top: 40vh;
+  }
+  .projects_items {
+    width: 80vw;
+    -ms-grid-columns: (1fr)[3];
+        grid-template-columns: repeat(3, 1fr);
+  }
+  .contact {
+    padding-top: 40vh;
+  }
+  .contact_list {
+    padding: 2rem 4rem;
+    -ms-grid-columns: (1fr)[3];
+        grid-template-columns: repeat(3, 1fr);
+  }
+  .contact .social-icons {
+    font-size: 2rem;
+  }
+}
+
+@media screen and (min-width: 1600px) {
+  .projects_bio-image {
+    height: 50vh;
+  }
 }
 
 body {

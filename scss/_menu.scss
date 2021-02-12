@@ -58,7 +58,7 @@
   top: 0;
   left: 0;
   width: 100vw;
-  opacity: 0.98;
+  opacity: 1;
   visibility: hidden;
 
   &.open {
@@ -100,7 +100,7 @@
       display: inline;
       font-size: 2rem;
       text-transform: uppercase;
-      font-weight: 300;
+      font-weight: 400;
       @include transition-ease;
 
       &:hover {
