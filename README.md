@@ -1,6 +1,6 @@
 # Developer Portfolio
 
-To view demo [Clicke here](https://vk0808.github.io/portfolio-sass/dist)
+To view demo [Click here](https://vk0808.github.io/portfolio-sass/dist)
 
 ---
 
