@@ -83,6 +83,7 @@
     }
 
     &_item {
+      padding: 1rem 0;
       transform: translateX(100vw);
       @include transition-ease;
 
@@ -99,7 +100,6 @@
       display: inline;
       font-size: 2rem;
       text-transform: uppercase;
-      padding: 2rem 0;
       font-weight: 300;
       @include transition-ease;
 
@@ -107,5 +107,11 @@
         color: $secndary-color;
       }
     }
+  }
+}
+
+@for $i from 1 through 4 {
+  .menu-nav_item:nth-child(#{$i}) {
+    transition-delay: ($i * 0.1s) + 0.05s;
   }
 }
